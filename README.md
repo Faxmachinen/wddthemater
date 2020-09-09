@@ -8,6 +8,8 @@ You will need [Python](https://www.python.org/) version 3.6 or later.
 ## How to use
 
 ### Folder struture
+Before you run the script, you will need to arrange the images you have in a particular folder structure. This folder structure is described below.
+
 The root folder contains one or more theme folders, and each theme folder contains a `day` and a `night` folder with images.
 The images are named in alphabetical order according to their chronology, but the actual names don't matter. The `day` folder contains everything from sunrise to sunset, and the `night` folder contains the rest.
 
