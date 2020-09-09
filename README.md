@@ -1,16 +1,19 @@
 # Theme automater for WinDynamicDesktop
-This is a script to automate the process of creating a theme for [WinDynamicDesktop](https://github.com/t1m0thyj/WinDynamicDesktop).
+This is a script to automate the process of creating custom themes for [WinDynamicDesktop](https://github.com/t1m0thyj/WinDynamicDesktop).
+For detailed information on creating themes, see [Creating custom themes](https://github.com/t1m0thyj/WinDynamicDesktop/wiki/Creating-custom-themes).
 
 ## Requirements
-You will need Python 3.6 or later.
+You will need [Python](https://www.python.org/) version 3.6 or later.
 
 ## How to use
 
 ### Folder struture
-The root folder contains one or more theme folders, and each theme folder contains a "day" and a "night" folder.
-The images are named in alphabetical order and are placed in the "day" and "night" folders.
+The root folder contains one or more theme folders, and each theme folder contains a `day` and a `night` folder with images.
+The images are named in alphabetical order according to their chronology, but the actual names don't matter. The `day` folder contains everything from sunrise to sunset, and the `night` folder contains the rest.
 
-Here is an example folder structure where SomeFolder is the root folder:
+> __Important__: Alphabetical ordering means `SomeFile_11.jpg` is ordered before `SomeFile_2.jpg` (but not `SomeFile_02.jpg`).
+
+Here is an example folder structure where `SomeFolder` is the root folder:
 
 * SomeFolder
   * Theme1
@@ -30,7 +33,7 @@ Here is an example folder structure where SomeFolder is the root folder:
     * night
       * ...
 
-The "day" and "night" folders exist just to tell the script how to group the images. During processing, the script will move and rename the images. After a successful run, the structure should look like this:
+The `day` and `night` folders exist just to tell the script how to group the images. During processing, the script will move and rename the images. After a successful run, the structure should look like this:
 
 * SomeFolder
   * Theme1
@@ -54,3 +57,6 @@ Change the current working directory to the root folder, then run the python scr
 cd C:\my\root\folder
 py -3 C:\path\to\makejson.py
 ```
+
+### Known issues
+The script only recognizes image files with the "JPG" extension.
